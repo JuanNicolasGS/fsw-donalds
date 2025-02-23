@@ -1,3 +1,11 @@
+<div align="center">
+  <img src="public/mainPage.png" width="245px" height="510px"/>
+  <img src="public/menuCategories.png" width="245px" height="510px"/>
+  <img src="public/productPage.png" width="245px" height="510px"/>
+  <img src="public/orderPage.png" width="245px" height="510px"/>
+</div>
+
+
 # FSW Donalds 🍔
 
 Este projeto foi desenvolvido durante a Full Stack Week com o objetivo de criar uma aplicação web para um sistema de delivery de alimentos, inspirado em plataformas populares como iFood.
@@ -16,4 +24,3 @@ Este projeto foi desenvolvido durante a Full Stack Week com o objetivo de criar 
 - **Pedidos em Tempo Real**: Acompanhe o status dos seus pedidos em tempo real.
 
 ## Este projeto foi desenvolvido durante a Full Stack Week, orientado por Felipe Rocha. Você pode encontrar mais informações sobre o evento no canal do YouTube
-
