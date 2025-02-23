@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="public/mainPage.png" width="245px" height="510px"/>
-  <img src="public/menuCategories.png" width="245px" height="510px"/>
-  <img src="public/productPage.png" width="245px" height="510px"/>
-  <img src="public/orderPage.png" width="245px" height="510px"/>
+  <img src="public/mainPage.png" width="215px" height="430px"/>
+  <img src="public/menuCategories.png" width="215px" height="430px"/>
+  <img src="public/productPage.png" width="215px" height="430px"/>
+  <img src="public/orderPage.png" width="215px" height="430px"/>
 </div>
 
 
