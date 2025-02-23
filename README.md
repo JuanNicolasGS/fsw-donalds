@@ -1,10 +1,11 @@
+<!--
 <div align="center">
   <img src="public/mainPage.png" width="200px" height="400px"/>
   <img src="public/menuCategories.png" width="200px" height="400px"/>
   <img src="public/productPage.png" width="200px" height="400px"/>
   <img src="public/orderPage.png" width="200px" height="400px"/>
 </div>
-
+-->
 
 # FSW Donalds 🍔
 
