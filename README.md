@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!--
+<div align="center">
+  <img src="public/mainPage.png" width="200px" height="400px"/>
+  <img src="public/menuCategories.png" width="200px" height="400px"/>
+  <img src="public/productPage.png" width="200px" height="400px"/>
+  <img src="public/orderPage.png" width="200px" height="400px"/>
+</div>
+-->
 
-## Getting Started
+# FSW Donalds 🍔
 
-First, run the development server:
+Este projeto foi desenvolvido durante a Full Stack Week com o objetivo de criar uma aplicação web para um sistema de delivery de alimentos, inspirado em plataformas populares como iFood.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas 🛠️
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework React para construção de aplicações web.
+- **Prisma**: ORM para interagir com o banco de dados de forma eficiente.
+- **PostgreSQL**: Banco de dados relacional utilizado para armazenar as informações.
+- **Tailwind CSS**: Framework CSS para estilização da aplicação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades 🚀
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Visualização de Restaurantes**: Explore uma variedade de restaurantes disponíveis na plataforma.
+- **Carrinho de Compras**: Adicione itens ao carrinho e gerencie suas seleções antes de finalizar o pedido.
+- **Pedidos em Tempo Real**: Acompanhe o status dos seus pedidos em tempo real.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Este projeto foi desenvolvido durante a Full Stack Week, orientado por Felipe Rocha. Você pode encontrar mais informações sobre o evento no canal do YouTube
