@@ -12,7 +12,7 @@ interface ProductsProps {
 const Products = ({ products }: ProductsProps) => {
   const { slug } = useParams<{ slug: string }>();
   const searchParams = useSearchParams();
-  const consumptionMethod = searchParams.get('consumptionMethod');
+  const consumptionMethod = searchParams.get("consumptionMethod");
   return (
     <div className="space-y-3 px-5">
       {products.map((product) => (

@@ -16,7 +16,7 @@ export interface ICartContext {
   toggleCart: () => void;
   addProduct: (product: CartProduct) => void;
   decreaseProductQuantity: (productId: string) => void;
-  increaseProductsQuantity: (productId: string) => void;
+  increaseProductQuantity: (productId: string) => void;
   removeProduct: (productId: string) => void;
 }
 
@@ -28,9 +28,8 @@ export const CartContext = createContext<ICartContext>({
   toggleCart: () => {},
   addProduct: () => {},
   decreaseProductQuantity: () => {},
-  increaseProductsQuantity: () => {},
+  increaseProductQuantity: () => {},
   removeProduct: () => {},
-  
 });
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -39,7 +38,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const total = products.reduce((acc, product) => {
     return acc + product.price * product.quantity;
-  }, 0)
+  }, 0);
   const totalQuantity = products.reduce((acc, product) => {
     return acc + product.quantity;
   }, 0);
@@ -66,37 +65,33 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     });
   };
   const decreaseProductQuantity = (productId: string) => {
-    setProducts(prevProducts => {
-      return prevProducts.map(prevProducts => {
-        if (prevProducts.id !== productId) {
-          return prevProducts;
+    setProducts((prevProducts) => {
+      return prevProducts.map((prevProduct) => {
+        if (prevProduct.id !== productId) {
+          return prevProduct;
         }
-        if (prevProducts.quantity === 1) {
-          return prevProducts;
+        if (prevProduct.quantity === 1) {
+          return prevProduct;
         }
-        return {
-          ...prevProducts, quantity: prevProducts.quantity - 1
-        };
-      })
-    })
+        return { ...prevProduct, quantity: prevProduct.quantity - 1 };
+      });
+    });
   };
-  const increaseProductsQuantity = (productId: string) => {
-    setProducts(prevProducts => {
-      return prevProducts.map(prevProducts => {
-        if (prevProducts.id!== productId) {
-          return prevProducts;
+  const increaseProductQuantity = (productId: string) => {
+    setProducts((prevProducts) => {
+      return prevProducts.map((prevProduct) => {
+        if (prevProduct.id !== productId) {
+          return prevProduct;
         }
-        return {
-         ...prevProducts, quantity: prevProducts.quantity + 1
-        };
-      })
-    })
-  }
+        return { ...prevProduct, quantity: prevProduct.quantity + 1 };
+      });
+    });
+  };
   const removeProduct = (productId: string) => {
-    setProducts(prevProducts => {
-      return prevProducts.filter(prevProducts => prevProducts.id !== productId)
-    })
-  }
+    setProducts((prevProducts) =>
+      prevProducts.filter((prevProduct) => prevProduct.id !== productId),
+    );
+  };
   return (
     <CartContext.Provider
       value={{
@@ -105,7 +100,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         toggleCart,
         addProduct,
         decreaseProductQuantity,
-        increaseProductsQuantity,
+        increaseProductQuantity,
         removeProduct,
         total,
         totalQuantity,

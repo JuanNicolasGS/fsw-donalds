@@ -2,7 +2,6 @@
 
 import { ConsumptionMethod } from "@prisma/client";
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
 
 import { db } from "@/lib/prisma";
 
@@ -24,7 +23,7 @@ export const createOrder = async (input: CreateOrderInput) => {
     where: {
       slug: input.slug,
     },
-  })
+  });
   if (!restaurant) {
     throw new Error("Restaurant not found");
   }
@@ -40,7 +39,7 @@ export const createOrder = async (input: CreateOrderInput) => {
     quantity: product.quantity,
     price: productsWithPrices.find((p) => p.id === product.id)!.price,
   }));
-  await db.order.create({
+  const order = await db.order.create({
     data: {
       status: "PENDING",
       customerName: input.customerName,
@@ -55,9 +54,9 @@ export const createOrder = async (input: CreateOrderInput) => {
         0,
       ),
       consumptionMethod: input.consumptionMethod,
-      restaurantId: restaurant.id
+      restaurantId: restaurant.id,
     },
   });
-  revalidatePath(`//${input.slug}/orders`);
-  redirect(`/${input.slug}/orders?cpf=${removeCpfPunctuation(input.customerCpf)}`);
+  revalidatePath(`/${input.slug}/orders`);
+  return order;
 };

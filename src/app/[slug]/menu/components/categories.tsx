@@ -30,7 +30,8 @@ type MenuCategoriesWithProducts = Prisma.MenuCategoryGetPayload<{
 const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
   const [selectedCategory, setSelectedCategory] =
     useState<MenuCategoriesWithProducts>(restaurant.menuCategories[0]);
-  const { products, total, toggleCart, totalQuantity } = useContext(CartContext);
+  const { products, total, toggleCart, totalQuantity } =
+    useContext(CartContext);
   const handleCategoryClick = (category: MenuCategoriesWithProducts) => {
     setSelectedCategory(category);
   };
@@ -79,17 +80,19 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
       <Products products={selectedCategory.products} />
       {products.length > 0 && (
         <div className="fixed bottom-0 left-0 right-0 flex w-full items-center justify-between border-t bg-white px-5 py-3">
-          <div className="">
-            <p className="text-xs text-muted-foreground">Total dos Pedidos</p>
+          <div>
+            <p className="text-xs text-muted-foreground">Total dos pedidos</p>
             <p className="text-sm font-semibold">
               {formatCurrency(total)}
-              <span className="text-xs text-muted-foreground font-normal">/ {totalQuantity} {totalQuantity > 1 ? "itens" : "item"} </span>
+              <span className="text-xs font-normal text-muted-foreground">
+                / {totalQuantity} {totalQuantity > 1 ? "itens" : "item"}
+              </span>
             </p>
           </div>
-          <Button onClick={toggleCart} >Ver sacola</Button>
+          <Button onClick={toggleCart}>Ver sacola</Button>
           <CartSheet />
         </div>
-      )};
+      )}
     </div>
   );
 };
